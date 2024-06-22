@@ -13,10 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "src/uploads")));
 
-app.use("/api", router);
+app.use(router);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+  res.send("API is running");
 });
 
 app.listen(port, async () => {

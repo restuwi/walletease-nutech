@@ -23,9 +23,9 @@ const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/uploads", express_1.default.static(path_1.default.join(__dirname, "src/uploads")));
-app.use("/api", routes_1.default);
+app.use(routes_1.default);
 app.get("/", (req, res) => {
-    res.send("Express + TypeScript Server");
+    res.send("API is running");
 });
 app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
     try {
