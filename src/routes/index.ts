@@ -19,7 +19,7 @@ const router = Router();
 router.post("/registration", register);
 router.post("/login", login);
 
-router.get("/profile", authentication, getUser);
+router.get("/profiles", authentication, getUser);
 router.put("/profile/update", authentication, updateUserProfile);
 router.put(
   "/profile/image",
